@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up</title>
+  <style>
+    body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b6/Regera_%28light_gradient%29.png');
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+    width: 600px;
+    background-color: grey;
+    padding: 20px;
+    color: black;
+    border-radius: 50px;
+}
+
+.label-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+}
+
+p {
+    font-weight: bold;
+    color: black;
+    width: 30%;
+    text-align: left;
+    margin: 0;
+}
+
+input {
+    background-color: antiquewhite;
+    border-radius: 20px;
+    width: 60%;
+    padding: 5px;
+    margin: 0;
+}
+
+input:hover {
+    background-color: white;
+}
+
+.but1, #login-but {
+    background-color: black;
+    color: aliceblue;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    margin: 10px 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.but1:hover, #login-but:hover {
+    background-color:red;
+}
+
+  </style>
+</head>
+<body>
+    <div id="signup-box">
+        <h1>Sign up</h1>
+        <div class="label-input-container">
+            <p>Enter name</p>
+            <input type="text" class="name">
+        </div>
+        <div class="label-input-container">
+            <p>Enter email</p>
+            <input type="text" class="email">
+        </div>
+        <div class="label-input-container">
+            <p>Enter Phone number</p>
+            <input type="text" class="num">
+        </div>
+        <div class="label-input-container">
+            <p>Enter username</p>
+            <input type="text" class="user">
+        </div>
+        <div class="label-input-container">
+            <p>Enter password</p>
+            <input type="password" class="pass">
+        </div>
+        <button class="but1">Submit</button>
+        <button id="login-but">Login</button>
+    </div>
+</body>
+    <script>
+        const signbut = document.getElementById('login-but');
+        signbut.addEventListener('click', function() {
+            window.location.href = 'login.html';
+        });
+        const submitbut=document.querySelector('.but1');
+        submitbut.addEventListener('click',function(){
+            //insert the input data in the database
+            alert('hello');
+        });
+    </script>
+</html>
